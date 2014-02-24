@@ -74,6 +74,8 @@ class Parola < ActiveRecord::Base
     # if a word ends in iolo, drop the o and make it iul (mariolo -> mariul')
     elsif !!(self.input[self.input.length-1] =~ /[o]/) and (self.input[self.input.length-4..self.input.length-2] == "iol")
       self.output[self.output.length-2] = "u"
+    elsif self.input[self.input.length-3..self.input.length-1] == "sci"
+      self.output[self.output.length-2..self.output.length-1] = "sh"
     elsif self.input[self.input.length-2..self.input.length-1] == "ci" or self.input[self.input.length-3..self.input.length-2] == "ci"
       self.output[self.output.length-2..self.output.length-1] = "ch"
     elsif self.output[self.output.length-2..self.output.length-1] == "zz"
@@ -82,6 +84,8 @@ class Parola < ActiveRecord::Base
       self.output = self.output[0..self.output.length-3] + "l"
     elsif self.output[self.output.length-4..self.output.length-1] == "tell"
       self.output[self.output.length-4] = "d"
+    elsif self.output[self.output.length-3..self.output.length-1] == "ucc"
+      self.output[self.output.length-3..self.output.length-1] = "uke"
     end
     
     
@@ -105,6 +109,8 @@ class Parola < ActiveRecord::Base
       self.output[0] = "g"
     elsif self.input[0..3] == "mozz"
       self.output[0..1] = "mu"
+    elsif self.input[0..2] == "qua"
+      self.output[0] = "q"
     end
     
     
