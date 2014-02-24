@@ -6,7 +6,7 @@ body { background: #c8c8c8 url("/assets/tweed.png") repeat; }
 main{ background: transparent !important; }
 
 
-.form-control[disabled]{background-color: #ffffff;}
+.form-control[disabled]{background-color: #ffffff; color: black;}
 
 .form-wrapper{ 
 	background-color: rgba(200, 80, 80, 0.8);
