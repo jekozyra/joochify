@@ -1,0 +1,41 @@
+// import the CSS framework
+@import "bootstrap";
+
+body { background: #c8c8c8 url("/assets/tweed.png") repeat; }
+
+main{ background: transparent !important; }
+
+
+.form-control[disabled]{background-color: #ffffff;}
+
+.form-wrapper{ 
+	background-color: rgba(200, 80, 80, 0.8);
+	padding:10px;
+	margin:10px;
+}
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
+
+.h1 small, .h1 .small, h1 small{
+	color: #cccccc;
+}

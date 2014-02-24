@@ -1,0 +1,47 @@
+<br />
+
+<div class="form-wrapper">
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<%= form_for @parola, url: parola_search_url, remote: true, html: { role: "form", class: "form-horizontal"} do |f| %>
+
+						<h1>Joochify. <small>Convert your vocab to Italian-American speak.</small></h1>
+
+						<br />
+
+						<div class="row">
+							<div class="col-md-10">
+									<%= f.text_field :input, placeholder: "Enter a word to joochify.", class: "input-lg form-control" %>
+							</div>
+							<%= f.submit "Joochify!", class: "btn btn-danger btn-lg" %>
+						</div>
+
+
+			<% end %>
+		
+		</div>
+	</div>
+	
+	<br />
+	
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1" id="search-result">
+			<input type="text" class="form-control input-lg" id="search-result-input">
+		</div>
+	</div>
+	
+	
+</div>
+
+
+<div class="row">
+	<div class="col-lg-10 col-lg-offset-1">
+		
+		<%= image_tag "joochify.png"%>
+		
+	</div>
+</div>
+
+
+
+

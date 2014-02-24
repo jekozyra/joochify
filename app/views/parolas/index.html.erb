@@ -1,0 +1,29 @@
+<h1>Listing parolas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Input</th>
+      <th>Output</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parolas.each do |parola| %>
+      <tr>
+        <td><%= parola.input %></td>
+        <td><%= parola.output %></td>
+        <td><%= link_to 'Show', parola %></td>
+        <td><%= link_to 'Edit', edit_parola_path(parola) %></td>
+        <td><%= link_to 'Destroy', parola, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parola', new_parola_path %>
