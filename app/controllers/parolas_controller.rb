@@ -45,7 +45,7 @@ class ParolasController < ApplicationController
   def update
     respond_to do |format|
       if @parola.update(parola_params)
-        format.html { redirect_to @parola, notice: 'Parola was successfully updated.' }
+        format.html { redirect_to parolas_url, notice: 'Parola was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
