@@ -3,8 +3,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Input</th>
       <th>Output</th>
+      <th>Input</th>
 			<th>Definition</th>
       <th></th>
       <th></th>
@@ -15,8 +15,8 @@
   <tbody>
     <% @parolas.each do |parola| %>
       <tr>
-        <td><%= parola.input %></td>
         <td><%= parola.output %></td>
+        <td><%= parola.input %></td>
 				<td><%= parola.definition %></td>
         <td><%= link_to 'Show', parola %></td>
         <td><%= link_to 'Edit', edit_parola_path(parola) %></td>

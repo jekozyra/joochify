@@ -2,6 +2,7 @@ class Parola < ActiveRecord::Base
   
   before_save :convert
   validates_uniqueness_of :input
+  default_scope order('output')
  
   def has_definition?
     !self.definition.nil? and self.definition != ""
