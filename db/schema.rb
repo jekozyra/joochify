@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140225170453) do
+ActiveRecord::Schema.define(version: 20140225224933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 20140225170453) do
     t.string   "part_of_speech"
     t.string   "etymology_language"
   end
+
+  create_table "pg_search_documents", force: true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pg_search_documents", ["content"], name: "index_pg_search_documents_on_content", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
