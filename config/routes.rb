@@ -1,8 +1,13 @@
 Joochify::Application.routes.draw do
   
   
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
   match 'parola_search', to: 'home#parola_search', as: :parola_search, via: [:post]
-  
+
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   resources :parolas
 
   # The priority is based upon order of creation: first created -> highest priority.

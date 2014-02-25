@@ -5,15 +5,17 @@
 		<div class="col-lg-10 col-lg-offset-1">
 			<%= form_for @parola, url: parola_search_url, remote: true, html: { role: "form", class: "form-horizontal"} do |f| %>
 
-						<h1>Joochify. <small>Convert your vocab to Italian-American speak.</small></h1>
+						<h1>Joochify. <small>Convert your boring vernacular to Jooch-speak.</small></h1>
 
 						<br />
 
 						<div class="row">
-							<div class="col-md-10">
-									<%= f.text_field :input, placeholder: "Enter a word to joochify.", class: "input-lg form-control" %>
+							<div class="col-md-10 col-xs-12">
+									<%= f.text_field :input, placeholder: "Enter a word to joochify, e.g. calamari", class: "input-lg form-control" %>
 							</div>
-							<%= f.submit "Joochify!", class: "btn btn-danger btn-lg" %>
+							<div class="col-md-2 col-xs-12 ">
+								<%= f.submit "Joochify!", class: "btn btn-danger btn-lg", id: "joochify-button" %>
+							</div>
 						</div>
 
 
@@ -26,7 +28,7 @@
 	
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1" id="search-result">
-			<input type="text" class="form-control input-lg" id="search-result-input">
+			<input type="text" class="form-control input-lg" id="search-result-input" placeholder="And you will get your word, e.g. galamad">
 		</div>
 	</div>
 	
@@ -37,7 +39,7 @@
 <div class="row">
 	<div class="col-lg-10 col-lg-offset-1">
 		
-		<%= image_tag "joochify.png"%>
+		<%= image_tag "joochify_necklace.png"%>
 		
 	</div>
 </div>

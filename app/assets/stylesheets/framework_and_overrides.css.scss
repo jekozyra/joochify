@@ -9,7 +9,7 @@ main{ background: transparent !important; }
 .form-control[disabled]{background-color: #ffffff; color: black; opacity: none;}
 
 .form-wrapper{ 
-	background-color: rgba(200, 80, 80, 0.8);
+	background-color: rgba(240, 30, 30, 0.6);
 	padding:10px;
 	margin:10px;
 }
@@ -37,5 +37,6 @@ section {
   }
 
 .h1 small, .h1 .small, h1 small{
-	color: #cccccc;
+	color: #eeeeee;
+	text-shadow: none;
 }

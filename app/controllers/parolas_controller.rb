@@ -1,5 +1,8 @@
 class ParolasController < ApplicationController
   before_action :set_parola, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, except: [:new, :create]
+
+
 
   # GET /parolas
   # GET /parolas.json
@@ -69,6 +72,6 @@ class ParolasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parola_params
-      params.require(:parola).permit(:input, :output)
+      params.require(:parola).permit(:input, :output, :definition)
     end
 end

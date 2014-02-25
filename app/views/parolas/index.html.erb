@@ -1,10 +1,11 @@
 <h1>Listing parolas</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Input</th>
       <th>Output</th>
+			<th>Definition</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= parola.input %></td>
         <td><%= parola.output %></td>
+				<td><%= parola.definition %></td>
         <td><%= link_to 'Show', parola %></td>
         <td><%= link_to 'Edit', edit_parola_path(parola) %></td>
         <td><%= link_to 'Destroy', parola, method: :delete, data: { confirm: 'Are you sure?' } %></td>

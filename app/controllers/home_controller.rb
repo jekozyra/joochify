@@ -1,15 +1,13 @@
 class HomeController < ApplicationController
+  
+  layout 'home'
+  
   def index
-    @parola = Parola.new    
-    # search for word
-    # if it exists, display result
-    # otherwise convert entry and display that
-    
+    @parola = Parola.new
   end
   
   
   def parola_search
-    
     @parola = nil
     if Parola.exists?(input: params["parola"]["input"])
       @parola = Parola.where(input: params["parola"]["input"]).first
@@ -19,8 +17,7 @@ class HomeController < ApplicationController
         
     respond_to do |format|
       format.js
-    end
-    
+    end    
   end
   
   
