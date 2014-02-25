@@ -1,8 +1,11 @@
 class Parola < ActiveRecord::Base
+  include PgSearch
   
   before_create :convert
   validates_uniqueness_of :input
   default_scope order('output')
+  multisearchable :against => [:input, :output, :definition]
+  
  
   def has_definition?
     !self.definition.nil? and self.definition != ""
