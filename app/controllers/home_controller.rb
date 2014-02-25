@@ -9,9 +9,8 @@ class HomeController < ApplicationController
   
   def parola_search
     @parola = nil
-    if Parola.exists?(input: params["parola"]["input"])
-      @parola = Parola.where(input: params["parola"]["input"]).first
-    else
+    @parola = PgSearch.multisearch(params["parola"]["input"]).shuffle.map(&:searchable).first
+    unless @parola
       @parola = Parola.create(input: params["parola"]["input"])
     end
         
