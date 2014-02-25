@@ -1,1 +1,5 @@
-<input type="text" class="form-control input-lg" id="search-result-input" disabled value="<%= @parola.output %>">
+<% if @parola.definition %>
+	<input type="text" class="form-control input-lg" id="search-result-input" disabled value="<%= @parola.output %>: <%= @parola.definition %>">
+<% else %>
+	<input type="text" class="form-control input-lg" id="search-result-input" disabled value="<%= @parola.output %>">
+<% end %>
