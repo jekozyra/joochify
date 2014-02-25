@@ -29,7 +29,7 @@ class Parola < ActiveRecord::Base
     end
     
     if self.has_definition?
-      result += ", 1. #{self.definition}"
+      result += ", #{self.definition}"
     end
     
     result
