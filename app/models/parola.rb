@@ -8,6 +8,34 @@ class Parola < ActiveRecord::Base
     !self.definition.nil? and self.definition != ""
   end
   
+  def has_part_of_speech?
+    !self.part_of_speech.nil? and self.part_of_speech != ""
+  end
+  
+  def has_etymology_language?
+    !self.part_of_speech.nil? and self.part_of_speech != ""
+  end
+  
+  def formatted_result
+    
+    result = self.output
+    
+    if self.has_part_of_speech?
+      result += ", <b><i>#{self.part_of_speech}</i></b>"
+    end
+    
+    if self.has_etymology_language?
+      result += ", from the #{self.etymology_language} <i>#{self.input}</i>"
+    end
+    
+    if self.has_definition?
+      result += ", 1. #{self.definition}"
+    end
+    
+    result
+    
+  end
+  
   def convert
     self.input = self.input.downcase
     self.output = self.input.downcase

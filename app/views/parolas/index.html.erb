@@ -5,6 +5,8 @@
     <tr>
       <th>Output</th>
       <th>Input</th>
+			<th>Part of Speech</th>
+			<th>Etymology Language</th>
 			<th>Definition</th>
       <th></th>
       <th></th>
@@ -17,6 +19,8 @@
       <tr>
         <td><%= parola.output %></td>
         <td><%= parola.input %></td>
+				<td><%= parola.part_of_speech %></td>
+				<td><%= parola.etymology_language %></td>
 				<td><%= parola.definition %></td>
         <td><%= link_to 'Show', parola %></td>
         <td><%= link_to 'Edit', edit_parola_path(parola) %></td>

@@ -72,6 +72,6 @@ class ParolasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parola_params
-      params.require(:parola).permit(:input, :output, :definition)
+      params.require(:parola).permit(:input, :output, :definition, :part_of_speech, :etymology_language)
     end
 end

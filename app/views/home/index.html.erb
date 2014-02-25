@@ -11,7 +11,7 @@
 
 						<div class="row">
 							<div class="col-md-10 col-xs-12">
-									<%= f.text_field :input, placeholder: "Enter a word to joochify, e.g. calamari", class: "input-lg form-control" %>
+									<%= f.text_field :input, placeholder: "Enter a word or phrase to joochify, e.g. calamari", class: "input-lg form-control" %>
 							</div>
 							<div class="col-md-2 col-xs-12 ">
 								<%= f.submit "Joochify it!", class: "btn btn-danger btn-lg", id: "joochify-button" %>
@@ -28,16 +28,10 @@
 	
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1" id="search-result">
-			<input type="text" class="form-control input-lg" id="search-result-input" placeholder="And you will get your word, e.g. galamad">
+			<div id="search_result_content" class="input-lg"><span class="placeholder">And you will get your result, e.g. galamad</span></div><br />
 		</div>
 	</div>
-	
-	<div class="row">
-		<div class="col-lg-10 col-lg-offset-1" id="search-result">
-			<h1><small>jooch, <i>n.</i>, from Italian <i>ciuccia</i> 1. Ass</small></h1>
-		</div>
-	</div>
-	
+	<br />
 	
 </div>
 
