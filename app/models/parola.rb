@@ -9,6 +9,7 @@ class Parola < ActiveRecord::Base
   end
   
   def convert
+    self.input = self.input.downcase
     self.output = self.input.downcase
     
     
