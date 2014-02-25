@@ -1,6 +1,6 @@
 class Parola < ActiveRecord::Base
   
-  before_save :convert
+  before_create :convert
   validates_uniqueness_of :input
   default_scope order('output')
  
