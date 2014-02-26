@@ -45,6 +45,8 @@ section {
 
 h5 a, h5.a { color: white !important }
 
+#content li{ font-size:15px; padding-bottom:3px; }
+
 #mobile-content h1, #mobile h1{
 	font-size: 28px;
 }
@@ -54,7 +56,7 @@ h5 a, h5.a { color: white !important }
 	font-size: 65%;
 }
 
-#mobile-content h1{
+#mobile-content h1, #content h1{
 	color: rgb(240, 30, 30);
 }
 
