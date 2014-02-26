@@ -1,6 +1,6 @@
 class WordListsController < ApplicationController
   def index
-    @tags = ActsAsTaggableOn::Tag.all
+    @tags = Parola.tag_counts
   end
 
   def show
