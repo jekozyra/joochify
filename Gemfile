@@ -8,6 +8,8 @@ gem 'rails', '4.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'pg_search'
+gem 'acts-as-taggable-on'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

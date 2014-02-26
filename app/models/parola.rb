@@ -1,6 +1,7 @@
 class Parola < ActiveRecord::Base
   include PgSearch
   
+  acts_as_taggable
   before_create :convert
   validates_uniqueness_of :input
   default_scope { order('output') }

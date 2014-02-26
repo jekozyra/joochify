@@ -1,0 +1,9 @@
+<br />
+<h1>Word Lists</h1>
+<br />
+<ul class="list-unstyled">
+<% @tags.each do |tag| %>
+	<li><h4><%= link_to tag.name, tag_path(tag.name) %><h4><li>
+<% end %>
+</ul>
+<br />

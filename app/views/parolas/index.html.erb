@@ -8,6 +8,7 @@
 			<th>Part of Speech</th>
 			<th>Etymology Language</th>
 			<th>Definition</th>
+			<th>Tags</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,6 +23,7 @@
 				<td><%= parola.part_of_speech %></td>
 				<td><%= parola.etymology_language %></td>
 				<td><%= parola.definition %></td>
+				<td><%= parola.tag_list %></td>
         <td><%= link_to 'Show', parola %></td>
         <td><%= link_to 'Edit', edit_parola_path(parola) %></td>
         <td><%= link_to 'Destroy', parola, method: :delete, data: { confirm: 'Are you sure?' } %></td>

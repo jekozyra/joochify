@@ -1,6 +1,6 @@
 Joochify::Application.routes.draw do
-  
-  
+
+  get 'word_lists/:tag', to: 'word_lists#show', as: :tag
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
@@ -9,6 +9,7 @@ Joochify::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :parolas
+  resources :word_lists, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

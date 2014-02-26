@@ -1,0 +1,9 @@
+<br />
+<h1><%= @tag.titleize %></h1>
+<br />
+<ul class="list-unstyled">
+<% @parolas.each do |parola| %>
+	<li><%= raw parola.formatted_result %></li>
+<% end %>
+</ul>
+<br />

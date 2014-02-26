@@ -43,12 +43,18 @@ section {
 	font-size: 62%;
 }
 
+h5 a, h5.a { color: white !important }
 
-#mobile-content h1{
+#mobile-content h1, #mobile h1{
 	font-size: 28px;
 }
 
-#mobile-content .h1 small, #mobile-content .h1 .small, #mobile-content h1 small{
+#mobile-content .h1 small, #mobile-content .h1 .small, #mobile-content h1 small,
+#mobile .h1 small, #mobile .h1 .small, #mobile h1 small{
 	font-size: 65%;
+}
+
+#mobile-content h1{
+	color: rgb(240, 30, 30);
 }
 
