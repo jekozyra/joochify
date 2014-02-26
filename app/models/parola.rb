@@ -3,7 +3,7 @@ class Parola < ActiveRecord::Base
   
   before_create :convert
   validates_uniqueness_of :input
-  default_scope order('output')
+  default_scope { order('output') }
   multisearchable :against => [:input, :output, :definition]
   
  

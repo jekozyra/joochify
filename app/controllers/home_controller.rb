@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   
   
   def parola_search
+    
     @parola = nil
     @parola = PgSearch.multisearch(params["parola"]["input"]).shuffle.map(&:searchable).first
     unless @parola
