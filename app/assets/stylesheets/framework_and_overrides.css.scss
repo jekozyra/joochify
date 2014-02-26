@@ -36,8 +36,19 @@ section {
   margin-top: 20px;
   }
 
+
 .h1 small, .h1 .small, h1 small{
 	color: #eeeeee;
 	text-shadow: none;
 	font-size: 62%;
 }
+
+
+#mobile-content h1{
+	font-size: 28px;
+}
+
+#mobile-content .h1 small, #mobile-content .h1 .small, #mobile-content h1 small{
+	font-size: 65%;
+}
+
