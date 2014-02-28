@@ -61,6 +61,10 @@ h5 a, h5.a { color: white !important }
 	color: rgb(240, 30, 30);
 }
 
-#footer p{
+.form-wrapper p, #footer p{
 	color: white;
+}
+.form-wrapper p{
+	font-size: 14px;
+	line-height:1.6em;
 }
